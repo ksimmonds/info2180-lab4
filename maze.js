@@ -3,6 +3,8 @@ window.onload =function1;
 
 	function function1(){
 	var boun = document.querySelectorAll(".boundary");
+	var s = true;
+	var e = false;
 	//Ex 1
 
 
@@ -40,6 +42,18 @@ window.onload =function1;
 		}
 		else{
 			document.getElementById("status").innerHTML="You Lose!";
+		}
+	});
+
+	//Ex 6
+	document.getElementById('maze').addEventListener("mouseleave",function(){
+		if(s){
+			e=true;
+			s=false;
+			document.getElementById("status").innerHTML="You Cheater";
+			for(i=0;i<boun.length;i++){
+				boun[i].classList.add('youlose');
+			}
 		}
 	});
 }

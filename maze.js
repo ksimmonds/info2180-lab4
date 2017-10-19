@@ -16,20 +16,30 @@ window.onload =function1;
 		boun[i].addEventListener("mouseover",function(){
 			for(var j =0;j<boun.length-1;j++){
 				boun[j].className="boundary youlose";
-				console.log(boun[i]);
+				document.getElementById("status").innerHTML="You Lose!";
 			}
 		});
 	}
 
 	//Ex 3
-	document.getElementById("end").addEventListener("mouseover",function(){
+	/*document.getElementById("end").addEventListener("mouseover",function(){
 		window.alert("You win!");
-	});
+	});*/
 
 	//Ex 4
 	document.getElementById("start").addEventListener("click",function(){
 		for(var i=0;i<boun.length-1;i++){
 			boun[i].className="boundary";
+		}
+	});
+
+	//Ex 5
+	document.getElementById("end").addEventListener("mouseover",function(){
+		if(!document.getElementById("boundary1").classList.contains("youlose")){
+			document.getElementById("status").innerHTML="You Win!";
+		}
+		else{
+			document.getElementById("status").innerHTML="You Lose!";
 		}
 	});
 }

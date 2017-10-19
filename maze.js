@@ -6,14 +6,14 @@ window.onload =function1;
 	//Ex 1
 
 
-	document.getElementById('boundary1').addEventListener("mouseover",function(){
-		document.getElementById('boundary1').className='boundary youlose';
+	document.getElementById("boundary1").addEventListener("mouseover",function(){
+		document.getElementById("boundary1").className="boundary youlose";
 	});
 
 	//Ex 2
 
 	for(let i=0;i<=boun.length-1;i++){
-		boun[i].addEventListener('mouseover',function(){
+		boun[i].addEventListener("mouseover",function(){
 			for(var j =0;j<boun.length-1;j++){
 				boun[j].className="boundary youlose";
 				console.log(boun[i]);
@@ -22,7 +22,14 @@ window.onload =function1;
 	}
 
 	//Ex 3
-	document.getElementById('end').addEventListener('mouseover',function(){
+	document.getElementById("end").addEventListener("mouseover",function(){
 		window.alert("You win!");
+	});
+
+	//Ex 4
+	document.getElementById("start").addEventListener("click",function(){
+		for(var i=0;i<boun.length-1;i++){
+			boun[i].className="boundary";
+		}
 	});
 }

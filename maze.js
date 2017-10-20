@@ -30,6 +30,9 @@ window.onload =function1;
 
 	//Ex 4
 	document.getElementById("start").addEventListener("click",function(){
+		s = true
+		e = false
+		document.getElementById("status").innerHTML='Move your mouse over the "S" to begin.'
 		for(var i=0;i<boun.length-1;i++){
 			boun[i].className="boundary";
 		}
